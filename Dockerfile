@@ -1,8 +1,6 @@
 FROM ubuntu:trusty
 RUN apt update
-RUN add-apt-repository ppa:mozillateam/ppaadd-apt-repository ppa:mozillateam/ppa
-RUN apt update
-RUN DEBIAN_FRONTEND=noninteractive apt install qemu-kvm xz-utils dbus-x11 curl firefox-esr-esr gnome-system-monitor mate-system-monitor  git xfce4 xfce4-terminal tightvncserver wget   -y
+RUN DEBIAN_FRONTEND=noninteractive apt install qemu-kvm xz-utils dbus-x11 curl firefox-esr-esr gnome-system-monitor system-monitor  git xfce4 xfce4-terminal tightvncserver wget   -y
 RUN wget https://github.com/novnc/noVNC/archive/refs/tags/v1.2.0.tar.gz
 RUN curl -LO https://proot.gitlab.io/proot/bin/proot
 RUN chmod 755 proot
